@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "Iniciando despliegue de la Agenda Telefónica"
-git pull origin main
+git pull origin master
 
 echo "Deteniendo contenedor existente"
 docker-compose -f docker-compose.production.yml down

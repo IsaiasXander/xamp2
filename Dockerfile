@@ -1,14 +1,6 @@
-FROM node:22-alpine
-
+FROM node:22-slim
 WORKDIR /app
-
 COPY package.json .
 RUN npm install
-
 COPY . .
-
-RUN mkdir -p /app/datos
-
-EXPOSE 3000
-
 CMD ["node", "server.js"]
