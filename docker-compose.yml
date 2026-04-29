@@ -4,11 +4,11 @@ services:
     container_name: agenda_node_dev
     restart: always
     ports:
-      - "8088:3000" # <-- Puerto externo 8088 (El de tu profe) conectado al 3000 de Node
+      - "8088:3000"
     volumes:
       - .:/app
-      - /app/node_modules # Evita sobreescribir dependencias de Linux con las de Windows/Mac
-      - agenda_datos:/app/datos # Aísla la base de datos SQLite
+      - /app/node_modules
+      - agenda_datos:/app/datos
 
 volumes:
   agenda_datos:
