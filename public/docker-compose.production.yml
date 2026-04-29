@@ -1,0 +1,12 @@
+services:
+  agenda:
+    build: .
+    container_name: agenda_node_prod
+    restart: always
+    ports:
+      - "8088:3000"
+    volumes:
+      - agenda_datos:/app/datos
+
+volumes:
+  agenda_datos:
